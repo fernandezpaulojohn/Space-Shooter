@@ -2593,6 +2593,83 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
+--- !u!1001 &1823689957
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1824852030133980104, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: canShoot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824852030133980104, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
+    - target: {fileID: 1824852030133980104, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: currentHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824852030133980104, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: timeBetweenShots
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1824852030133980104, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: changeDirectionXPoint
+      value: 4.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955634176759566253, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_Name
+      value: Enemy Purple (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175044453247193451, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 30.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175044453247193451, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175044453247193451, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175044453247193451, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175044453247193451, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175044453247193451, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175044453247193451, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175044453247193451, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175044453247193451, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9175044453247193451, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
 --- !u!1 &1916803600
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,5 +3236,6 @@ SceneRoots:
   - {fileID: 708366037}
   - {fileID: 1203296952}
   - {fileID: 5643215587278743174}
+  - {fileID: 1823689957}
   - {fileID: 8144880044359419699}
   - {fileID: 5731618801238605928}
