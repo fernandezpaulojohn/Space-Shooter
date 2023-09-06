@@ -68,7 +68,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 4331299861108754025, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4331299861108754025, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
       propertyPath: timeBetweenShots
@@ -158,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 4331299861108754025, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4331299861108754025, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
       propertyPath: timeBetweenShots
@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 1824852030133980104, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1824852030133980104, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
       propertyPath: timeBetweenShots
@@ -362,7 +362,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 9139681911787711270, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9139681911787711270, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
       propertyPath: timeBetweenShots
@@ -400,7 +400,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 1824852030133980104, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1824852030133980104, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
       propertyPath: timeBetweenShots
@@ -517,12 +517,16 @@ PrefabInstance:
       value: Enemy Orange (2)
       objectReference: {fileID: 0}
     - target: {fileID: 9139681911787711270, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
+      propertyPath: canShoot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139681911787711270, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
       propertyPath: deathEffect
       value: 
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 9139681911787711270, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9139681911787711270, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
       propertyPath: timeBetweenShots

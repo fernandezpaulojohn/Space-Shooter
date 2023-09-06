@@ -251,15 +251,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050c0cb88a2c6e34da59eacf7fa5ba32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave:
+  waves:
   - timeToSpawn: 2
     theWave: {fileID: 1403952116411270837, guid: 4e4a86ceb9ac31543b1883cfb47960c8, type: 3}
   - timeToSpawn: 3
     theWave: {fileID: 4335157133509105824, guid: c5eeb8977820e274995b36f99b04eb24, type: 3}
-  - timeToSpawn: 1
-    theWave: {fileID: 4335157133509105824, guid: c5eeb8977820e274995b36f99b04eb24, type: 3}
-  - timeToSpawn: 3
+  - timeToSpawn: 0.5
     theWave: {fileID: 1403952116411270837, guid: 4e4a86ceb9ac31543b1883cfb47960c8, type: 3}
+  - timeToSpawn: 3
+    theWave: {fileID: 4335157133509105824, guid: c5eeb8977820e274995b36f99b04eb24, type: 3}
+  currentWave: 0
+  timeToNextWave: 0
+  canSpawnWaves: 1
 --- !u!1 &282001743
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +747,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &536009456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 536009458}
+  - component: {fileID: 536009457}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &536009457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536009456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e634168af096ed34dbc61a0e716f172a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &536009458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536009456}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.712054, y: -0.3273155, z: 0.7476982}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &621888178
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0464b282dd47f141b73e958e71c01d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 5
+  currentHealth: 0
   maxHealth: 5
   deathEffect: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
 --- !u!1 &706675631
@@ -1241,7 +1288,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 4331299861108754025, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4331299861108754025, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
       propertyPath: timeBetweenShots
@@ -2389,12 +2436,16 @@ PrefabInstance:
       value: Enemy Orange
       objectReference: {fileID: 0}
     - target: {fileID: 9139681911787711270, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
+      propertyPath: canShoot
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139681911787711270, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
       propertyPath: deathEffect
       value: 
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 9139681911787711270, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9139681911787711270, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
       propertyPath: timeBetweenShots
@@ -2427,7 +2478,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 3125824975982669965, guid: 396f776e6c4c4db43988d3f40e7cfce3, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3125824975982669965, guid: 396f776e6c4c4db43988d3f40e7cfce3, type: 3}
       propertyPath: startDirection.x
@@ -2512,7 +2563,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 4136986070319932555, guid: 953a66f77695c1d46a5c7298acef57f6, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4136986070319932555, guid: 953a66f77695c1d46a5c7298acef57f6, type: 3}
       propertyPath: startDirection.x
@@ -2599,3 +2650,4 @@ SceneRoots:
   - {fileID: 5731618801238605928}
   - {fileID: 816658281}
   - {fileID: 19206453}
+  - {fileID: 536009458}

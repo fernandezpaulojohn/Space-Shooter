@@ -7,18 +7,46 @@ public class WaveManager : MonoBehaviour
 
     public static WaveManager instance;
 
-    public WaveObject[] wave;
+    public WaveObject[] waves;
 
+    public int currentWave;
+
+    public float timeToNextWave;
+
+    public bool canSpawnWaves;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+        timeToNextWave = waves[0].timeToSpawn;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (canSpawnWaves)
+        {
+            timeToNextWave -= Time.deltaTime;
+            if (timeToNextWave <= 0)
+            {
+                Instantiate(waves[currentWave].theWave, transform.position, transform.rotation);
+
+                if (currentWave < waves.Length - 1)
+                {
+
+                    currentWave++;
+
+                    timeToNextWave = waves[currentWave].timeToSpawn;
+                }else
+                {
+                    canSpawnWaves = false;
+                }
+            }
+        }
     }
 }
 

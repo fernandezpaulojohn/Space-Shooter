@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: canShoot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: deathEffect
@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: startDirection.y
@@ -184,7 +184,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: canShoot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: deathEffect
@@ -192,7 +192,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: startDirection.y
@@ -278,7 +278,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: canShoot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: deathEffect
@@ -286,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: startDirection.y
@@ -372,7 +372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: canShoot
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: deathEffect
@@ -380,7 +380,7 @@ PrefabInstance:
       objectReference: {fileID: 3979299195950219959, guid: b16e6f5d6ae1a7148967968c3983f2aa, type: 3}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: currentHealth
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5523427329819699962, guid: 2d68008ecff720642879c70aad6b02a2, type: 3}
       propertyPath: startDirection.y
