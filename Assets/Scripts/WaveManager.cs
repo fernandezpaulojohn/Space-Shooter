@@ -48,6 +48,14 @@ public class WaveManager : MonoBehaviour
             }
         }
     }
+
+    public void ContinueSpawning()
+    {
+        if(currentWave < waves.Length - 1 && timeToNextWave > 0)
+        {
+            canSpawnWaves = true;
+        }
+    }
 }
 
 [System.Serializable]
