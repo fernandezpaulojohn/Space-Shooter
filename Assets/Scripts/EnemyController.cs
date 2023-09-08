@@ -67,15 +67,15 @@ public class EnemyController : MonoBehaviour
         
     }
 
-    public void HurtEnemy()
-    {
-        currentHealth--;
+   public void HurtEnemy()
+   {
+       currentHealth--;
         if(currentHealth < 0)
-        {
+       {
             Destroy(gameObject);
-            Instantiate(deathEffect, transform.position, transform.rotation);
+          Instantiate(deathEffect, transform.position, transform.rotation);
         }
-    }
+   }
 
     private void OnBecameInvisible()
     {

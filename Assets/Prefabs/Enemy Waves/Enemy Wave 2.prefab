@@ -58,6 +58,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6404157457986003546}
     m_Modifications:
+    - target: {fileID: 4014809085779144870, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014809085779144870, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1974528983
+      objectReference: {fileID: 0}
     - target: {fileID: 4331299861108754025, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
       propertyPath: canShoot
       value: 1
@@ -148,6 +156,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6404157457986003546}
     m_Modifications:
+    - target: {fileID: 4014809085779144870, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014809085779144870, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1974528983
+      objectReference: {fileID: 0}
     - target: {fileID: 4331299861108754025, guid: 0d4bcf6f163b8c440948ce084ef55ffe, type: 3}
       propertyPath: canShoot
       value: 1
@@ -250,6 +266,14 @@ PrefabInstance:
       propertyPath: changeDirectionXPoint
       value: 4.65
       objectReference: {fileID: 0}
+    - target: {fileID: 2354188111437153602, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354188111437153602, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1974528983
+      objectReference: {fileID: 0}
     - target: {fileID: 8955634176759566253, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
       propertyPath: m_Name
       value: Enemy Purple (1)
@@ -312,6 +336,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6404157457986003546}
     m_Modifications:
+    - target: {fileID: 5364040988463234786, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5364040988463234786, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1974528983
+      objectReference: {fileID: 0}
     - target: {fileID: 7480090776119673649, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.88
@@ -410,6 +442,14 @@ PrefabInstance:
       propertyPath: changeDirectionXPoint
       value: 4.65
       objectReference: {fileID: 0}
+    - target: {fileID: 2354188111437153602, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2354188111437153602, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1974528983
+      objectReference: {fileID: 0}
     - target: {fileID: 8955634176759566253, guid: a9261eca7bd88254097a2409aa9e4ab5, type: 3}
       propertyPath: m_Name
       value: Enemy Purple
@@ -472,6 +512,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6404157457986003546}
     m_Modifications:
+    - target: {fileID: 5364040988463234786, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5364040988463234786, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1974528983
+      objectReference: {fileID: 0}
     - target: {fileID: 7480090776119673649, guid: fcdadb31784a47744bf3efa069a0f6b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.9263306

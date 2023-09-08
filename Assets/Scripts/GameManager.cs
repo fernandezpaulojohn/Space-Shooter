@@ -17,10 +17,21 @@ public class GameManager : MonoBehaviour
     {
         instance = this; 
     }
-     
+
+    private void Start()
+    {
+        UIManager.Instance.livesText.text = "x " + currentLives;
+    }
+
+    private void Update()
+    {
+        
+    }
+
     public void KillPlayer()
     {
         currentLives--;
+        UIManager.Instance.livesText.text = "x " + currentLives;
 
         if (currentLives > 0)
         {
@@ -30,6 +41,9 @@ public class GameManager : MonoBehaviour
         else
         {
             //game over code 
+
+            UIManager.Instance.gameOverScreen.SetActive(true);
+            WaveManager.instance.canSpawnWaves = false;
         }
     }
 
