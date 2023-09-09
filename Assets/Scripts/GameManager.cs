@@ -13,14 +13,24 @@ public class GameManager : MonoBehaviour
 
     public float respawnTime = 2f;
 
+    public int currentScore;
+    private int highScore = 500;
+
     private void Awake()
     {
         instance = this; 
     }
 
-    private void Start()
+     void Start()
     {
-        UIManager.Instance.livesText.text = "x " + currentLives;
+        UIManager.instance.livesText.text = "x " + currentLives;
+
+        UIManager.instance.scoreText.text = "Score: " + currentScore;
+
+        highScore = PlayerPrefs.GetInt("HighScore");
+
+        UIManager.instance.hiScoreText.text = "Hi-Score: " + highScore;
+
     }
 
     private void Update()
@@ -31,7 +41,7 @@ public class GameManager : MonoBehaviour
     public void KillPlayer()
     {
         currentLives--;
-        UIManager.Instance.livesText.text = "x " + currentLives;
+        UIManager.instance.livesText.text = "x " + currentLives;
 
         if (currentLives > 0)
         {
@@ -42,7 +52,7 @@ public class GameManager : MonoBehaviour
         {
             //game over code 
 
-            UIManager.Instance.gameOverScreen.SetActive(true);
+            UIManager.instance.gameOverScreen.SetActive(true);
             WaveManager.instance.canSpawnWaves = false;
         }
     }
@@ -54,4 +64,18 @@ public class GameManager : MonoBehaviour
 
         WaveManager.instance.ContinueSpawning();
     }
+
+    public void AddScore(int scoreToAdd)
+    {
+        currentScore += scoreToAdd;
+        UIManager.instance.scoreText.text = "Score :" + currentScore;
+
+        if(currentScore > highScore)
+        {
+            highScore = currentScore;
+            UIManager.instance.hiScoreText.text = "Hi-Score: " + highScore;
+            PlayerPrefs.SetInt("HighScore", highScore); 
+        }
+    }
 }
+

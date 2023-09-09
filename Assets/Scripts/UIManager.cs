@@ -4,18 +4,24 @@ using System.Security.Cryptography.X509Certificates;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager Instance;
+    public static UIManager instance;
 
     public GameObject gameOverScreen;
 
     public Text livesText;
+
+    public Slider healthBar;
+
+    public Text scoreText, hiScoreText;
+
     public void Awake()
     {
-        Instance = this;
+        instance = this;
     }
 
     // Start is called before the first frame update
