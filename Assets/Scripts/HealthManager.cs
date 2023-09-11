@@ -34,7 +34,7 @@ public class HealthManager : MonoBehaviour
 
         UIManager.instance.shieldBar.maxValue = shieldMaxPwr;
         UIManager.instance.shieldBar.value = shieldPwr;
-        ActivateShield();
+        
     }
 
     // Update is called once per frame
@@ -59,6 +59,7 @@ public class HealthManager : MonoBehaviour
             if (theShield.activeInHierarchy)
             {
                 shieldPwr--;
+
                 if(shieldPwr <= 0)
                 {
                     theShield.SetActive(false);
@@ -80,6 +81,9 @@ public class HealthManager : MonoBehaviour
 
                     WaveManager.instance.canSpawnWaves = false;
                 }
+
+                PlayerController.instance.doubleShotActive = false;
+
             }
         }
     }

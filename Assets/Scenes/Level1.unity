@@ -412,17 +412,17 @@ MonoBehaviour:
   - timeToSpawn: 3
     theWave: {fileID: 4335157133509105824, guid: c5eeb8977820e274995b36f99b04eb24, type: 3}
   - timeToSpawn: 3
+    theWave: {fileID: 1403952116411270837, guid: 4e4a86ceb9ac31543b1883cfb47960c8, type: 3}
+  - timeToSpawn: 3
     theWave: {fileID: 4335157133509105824, guid: c5eeb8977820e274995b36f99b04eb24, type: 3}
+  - timeToSpawn: 3
+    theWave: {fileID: 1403952116411270837, guid: 4e4a86ceb9ac31543b1883cfb47960c8, type: 3}
   - timeToSpawn: 3
     theWave: {fileID: 4335157133509105824, guid: c5eeb8977820e274995b36f99b04eb24, type: 3}
   - timeToSpawn: 3
     theWave: {fileID: 4335157133509105824, guid: c5eeb8977820e274995b36f99b04eb24, type: 3}
   - timeToSpawn: 3
-    theWave: {fileID: 4335157133509105824, guid: c5eeb8977820e274995b36f99b04eb24, type: 3}
-  - timeToSpawn: 3
-    theWave: {fileID: 4335157133509105824, guid: c5eeb8977820e274995b36f99b04eb24, type: 3}
-  - timeToSpawn: 3
-    theWave: {fileID: 4335157133509105824, guid: c5eeb8977820e274995b36f99b04eb24, type: 3}
+    theWave: {fileID: 1403952116411270837, guid: 4e4a86ceb9ac31543b1883cfb47960c8, type: 3}
   - timeToSpawn: 3
     theWave: {fileID: 4335157133509105824, guid: c5eeb8977820e274995b36f99b04eb24, type: 3}
   - timeToSpawn: 3
@@ -1216,7 +1216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e634168af096ed34dbc61a0e716f172a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLives: 1
+  currentLives: 2
   respawnTime: 2
   currentScore: 0
 --- !u!4 &536009458
@@ -1543,6 +1543,10 @@ MonoBehaviour:
   shotPoint: {fileID: 1916803601}
   shot: {fileID: 8103824568008828450, guid: fa48d28911436f741b7c89b70d496a89, type: 3}
   timeBetweenShots: 0.2
+  boostSpeed: 8
+  boostLength: 5
+  doubleShotActive: 0
+  doubleShotOffset: 0.2
 --- !u!58 &621888183
 CircleCollider2D:
   m_ObjectHideFlags: 0

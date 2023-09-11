@@ -30,7 +30,7 @@ public class EnemyShot : MonoBehaviour
             HealthManager.instance.HurtPlayer();
         }
 
-        Destroy(other.gameObject);
+        Destroy(this.gameObject);
    
     }
 

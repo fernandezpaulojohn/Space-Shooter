@@ -139,6 +139,14 @@ MonoBehaviour:
   shotToFire: {fileID: 3847682803564977683, guid: 7df3bdf9f01a1754d9d39afaccb55ef6, type: 3}
   firePoint: {fileID: 8549382724875605201}
   timeBetweenShots: 0
+  canShoot: 0
+  currentHealth: 0
+  deathEffect: {fileID: 0}
+  scoreValue: 100
+  powerUps:
+  - {fileID: 5059341775044911059, guid: f3d07ab36541c91408040f80a7939aea, type: 3}
+  - {fileID: 985645033805834602, guid: 95026fcdaeda6de44a85e81e777ea26f, type: 3}
+  - {fileID: 2079842322655170945, guid: 3e8c29c050100e2489cab64006115475, type: 3}
 --- !u!61 &5348956203655467663
 BoxCollider2D:
   m_ObjectHideFlags: 0
