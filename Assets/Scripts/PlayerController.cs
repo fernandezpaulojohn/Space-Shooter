@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
               Instantiate(shot, shotPoint.position + new Vector3(0f, doubleShotOffset, 0f), shotPoint.rotation);
               Instantiate(shot, shotPoint.position - new Vector3(0f, doubleShotOffset, 0f), shotPoint.rotation);
             }
-            
+
             shotCounter = timeBetweenShots;
         }
 
