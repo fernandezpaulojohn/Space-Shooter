@@ -20,6 +20,10 @@ public class UIManager : MonoBehaviour
     public Text scoreText, hiScoreText;
 
     public GameObject levelEndScreen;
+
+    public Text endLevelScore, endCurrentScore;
+    public GameObject highScoreNotice;
+
     public void Awake()
     {
         instance = this;

@@ -500,7 +500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &19206453
 Transform:
   m_ObjectHideFlags: 0
@@ -1327,7 +1327,7 @@ MonoBehaviour:
   currentScore: 0
   levelEnding: 0
   waitForLevelEnd: 5
-  nextLevel: Level2
+  nextLevel: 
 --- !u!4 &536009458
 Transform:
   m_ObjectHideFlags: 0
@@ -5156,6 +5156,10 @@ PrefabInstance:
     - target: {fileID: 4059963712675425564, guid: 2d9f1a653afaf3b4fb6a9c220ddc177f, type: 3}
       propertyPath: m_Name
       value: End Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059963712675425564, guid: 2d9f1a653afaf3b4fb6a9c220ddc177f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

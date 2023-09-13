@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Collections;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,12 @@ public class GameManager : MonoBehaviour
 
     public bool levelEnding;
 
+    private int levelScore;
+
+    public float waitForLevelEnd = 5f;
+
+    public string nextLevel;
+
     private void Awake()
     {
         instance = this; 
@@ -25,13 +32,16 @@ public class GameManager : MonoBehaviour
 
      void Start()
     {
+
+        currentLives = PlayerPrefs.GetInt("CurrentLives");
         UIManager.instance.livesText.text = "x " + currentLives;
 
-        UIManager.instance.scoreText.text = "Score: " + currentScore;
 
         highScore = PlayerPrefs.GetInt("HighScore");
-
         UIManager.instance.hiScoreText.text = "Hi-Score: " + highScore;
+
+        currentScore = PlayerPrefs.GetInt("CurrentScore");
+        UIManager.instance.scoreText.text = "Score: " + currentScore;
 
     }
 
@@ -61,6 +71,7 @@ public class GameManager : MonoBehaviour
             WaveManager.instance.canSpawnWaves = false;
 
             MusicController.instance.PlayGameOver();
+            PlayerPrefs.SetInt("HighScore", highScore);
         }
     }
 
@@ -75,13 +86,14 @@ public class GameManager : MonoBehaviour
     public void AddScore(int scoreToAdd)
     {
         currentScore += scoreToAdd;
+        levelScore += scoreToAdd;
         UIManager.instance.scoreText.text = "Score :" + currentScore;
 
         if(currentScore > highScore)
         {
             highScore = currentScore;
             UIManager.instance.hiScoreText.text = "Hi-Score: " + highScore;
-            PlayerPrefs.SetInt("HighScore", highScore); 
+            //PlayerPrefs.SetInt("HighScore", highScore); 
         }
     }
 
@@ -91,10 +103,31 @@ public class GameManager : MonoBehaviour
         UIManager.instance.levelEndScreen.SetActive(true);
         PlayerController.instance.stopMovement = true;
         levelEnding = true;
-
         MusicController.instance.PlayVictory();
 
         yield return new WaitForSeconds(.5f);
+
+        UIManager.instance.endLevelScore.text = "Level Score: " + levelScore;
+        UIManager.instance.endLevelScore.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(.5f);
+
+        PlayerPrefs.SetInt("CurrentScore", currentScore);
+        UIManager.instance.endCurrentScore.text = "Total Score: " + currentScore;
+        UIManager.instance.endCurrentScore.gameObject.SetActive(true);
+
+        if(currentScore == highScore)
+        {
+            yield return new WaitForSeconds(.5f);
+            UIManager.instance.highScoreNotice.SetActive(true);
+        }
+
+        PlayerPrefs.SetInt("HighScore", highScore);
+        PlayerPrefs.SetInt("CurrentLives", currentLives);
+
+        yield return new WaitForSeconds(waitForLevelEnd);
+
+        SceneManager.LoadScene(nextLevel);
     }
 }
 
