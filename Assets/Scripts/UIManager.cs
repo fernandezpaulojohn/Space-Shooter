@@ -24,6 +24,13 @@ public class UIManager : MonoBehaviour
     public Text endLevelScore, endCurrentScore;
     public GameObject highScoreNotice;
 
+    public GameObject pauseScreen;
+
+    public string mainMenuName = "MainMenu";
+
+    public Slider bossHealthSlider;
+    public Text bossName;
+
     public void Awake()
     {
         instance = this;
@@ -44,10 +51,17 @@ public class UIManager : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
     }
 
     public void QuitToMain()
     {
+        SceneManager.LoadScene(mainMenuName);
+        Time.timeScale = 1f;
+    }
 
+    public void Resume()
+    {
+        GameManager.instance.PauseUnpause();
     }
 }

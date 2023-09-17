@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     public string nextLevel;
 
+    private bool canPause;
+
     private void Awake()
     {
         instance = this; 
@@ -43,6 +45,8 @@ public class GameManager : MonoBehaviour
         currentScore = PlayerPrefs.GetInt("CurrentScore");
         UIManager.instance.scoreText.text = "Score: " + currentScore;
 
+        canPause = true;
+
     }
 
      void Update()
@@ -50,6 +54,11 @@ public class GameManager : MonoBehaviour
         if (levelEnding)
         {
             PlayerController.instance.transform.position += new Vector3(PlayerController.instance.boostSpeed * Time.deltaTime, 0f, 0f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && canPause)
+        {
+            PauseUnpause();
         }
     }
 
@@ -72,6 +81,8 @@ public class GameManager : MonoBehaviour
 
             MusicController.instance.PlayGameOver();
             PlayerPrefs.SetInt("HighScore", highScore);
+
+            canPause = false;
         }
     }
 
@@ -105,6 +116,8 @@ public class GameManager : MonoBehaviour
         levelEnding = true;
         MusicController.instance.PlayVictory();
 
+        canPause = false;
+
         yield return new WaitForSeconds(.5f);
 
         UIManager.instance.endLevelScore.text = "Level Score: " + levelScore;
@@ -128,6 +141,22 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(waitForLevelEnd);
 
         SceneManager.LoadScene(nextLevel);
+    }
+
+    public void PauseUnpause()
+    {
+        if (UIManager.instance.pauseScreen.activeInHierarchy)
+        {
+            UIManager.instance.pauseScreen.SetActive(false);
+            Time.timeScale = 1f;
+            PlayerController.instance.stopMovement = false;
+        }
+        else
+        {
+            UIManager.instance.pauseScreen.SetActive(true);
+            Time.timeScale = 0f;
+            PlayerController.instance.stopMovement = true;
+        }
     }
 }
 
