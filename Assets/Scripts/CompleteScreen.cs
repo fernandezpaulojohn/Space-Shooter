@@ -3,34 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class Script: MonoBehaviour
+
+
+public class CompleteScreen : MonoBehaviour
 {
+
     public float timeBetweenTexts;
 
     public bool canExit;
 
-    public string mainmenuName = "MainMenu";
+    public string mainMenuName = "MainMenu";
 
     public Text message, score, pressKey;
-
-
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(ShowTextCo());
+        StartCoroutine(ShowTextco());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(canExit && Input.anyKeyDown)
+       if(canExit && Input.anyKeyDown)
         {
-            SceneManager.LoadScene(mainmenuName);
+           SceneManager.LoadScene(mainMenuName);
         }
+        
+
+        
     }
 
-    public IEnumerator ShowTextCo()
+    public IEnumerator ShowTextco()
     {
         yield return new WaitForSeconds(timeBetweenTexts);
         message.gameObject.SetActive(true);
